@@ -65,14 +65,6 @@ p {
     font-size: 20px;
 }
 
-.audit-table tr {
-    background: var(--surface);
-}
-
-.audit-table tr:nth-child(even) {
-    background: var(--surface-alt);
-}
-
 /* ============================================================
    ✅ BASE LAYOUT (TON CODE D'ORIGINE – NON MODIFIÉ)
    ============================================================ */

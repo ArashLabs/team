@@ -38,10 +38,3 @@
     background: rgba(0,120,212,.12);
 }
 
-.audit-table tr {
-    background: var(--surface);
-}
-
-.audit-table tr:nth-child(even) {
-    background: var(--surface-alt);
-}
