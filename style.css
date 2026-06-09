@@ -765,7 +765,7 @@ input:checked + .chk {
     line-height:1.5;
     font-family:Consolas, "Cascadia Code", monospace;
 
-    var(--surface)-space:pre-wrap;
+    white-space:pre-wrap;
     word-break:break-word;
 }
 
@@ -904,7 +904,7 @@ input:checked + .chk {
     line-height:1.5;
     font-family:Consolas, "Cascadia Code", monospace;
 
-    var(--surface)-space:pre-wrap;
+    white-space:pre-wrap;
     word-break:break-word;
 }
 
@@ -929,7 +929,7 @@ input:checked + .chk {
     font-size: 14px;
     line-height: 1.5;
 
-    var(--surface)-space: pre-wrap;
+    white-space: pre-wrap;
     overflow-wrap: break-word;
 
     overflow: hidden;
