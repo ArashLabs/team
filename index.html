@@ -1,55 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>DariusLabs Internal Knowledge Base</title>
+<title>DariusLabs Internal</title>
 
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
-
 <body>
 
-<header class="hero">
-    <img src="orbid.png" alt="DariusLabs Logo" class="logo">
+<header>
+    <h1>
+        <i class="fa-solid fa-book"></i>
+        DariusLabs Tutorials
+    </h1>
 
-    <h1>Internal Knowledge Base</h1>
-
-    <p>
-        Engineering documentation, runbooks, troubleshooting guides and operational procedures.
-    </p>
+    <div class="subtitle">
+        Knowledge Base & IT Procedures
+    </div>
 </header>
 
-<main class="container">
+<div class="container">
 
-    <section class="card-grid">
+    <div class="section">
 
-        <a class="card" href="./dfsr-sysvol-recovery/">
-            <h2>DFSR SYSVOL Recovery</h2>
-            <p>Restore SYSVOL replication and recover DFSR state.</p>
-        </a>
+        <h2>
+            <i class="fa-solid fa-graduation-cap"></i>
+            Available Tutorials
+        </h2>
 
-        <a class="card" href="./veeam-upgrade-12-to-13/">
-            <h2>Veeam Upgrade 12 → 13</h2>
-            <p>Upgrade procedures and validation checklist.</p>
-        </a>
+        <ul class="checklist">
 
-        <a class="card" href="./exchange-hybrid-outlook/">
-            <h2>Exchange Hybrid</h2>
-            <p>Hybrid troubleshooting and Outlook configuration issues.</p>
-        </a>
+            <li class="item-row">
+                <a class="item-tuto"
+                   href="./dfsr-sysvol-recovery/">
+                   DFSR SYSVOL Recovery
+                </a>
+            </li>
 
-    </section>
+            <!-- Ajouter les futurs tutos ici -->
 
-</main>
+        </ul>
+
+    </div>
+
+</div>
 
 <footer>
 
-    <p>
-        DariusLabs Internal Documentation
-    </p>
+    <div style="display:flex; align-items:center; justify-content:center; gap:15px;">
+
+        <img src="../orbid.png"
+             alt="Orbid Logo"
+             style="height:70px;">
+
+        <span>
+            DFSR SYSVOL Recovery Procedure<br>
+            © Created by Jasha Eslahi
+        </span>
+
+    </div>
 
 </footer>
 

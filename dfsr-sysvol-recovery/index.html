@@ -120,8 +120,7 @@
         </h2>
 
         <p>
-            An old Domain Controller was removed during a previous
-            infrastructure migration without fully cleaning DFSR metadata.
+            A common cause of DFSR SYSVOL failures is an incomplete Domain Controller decommissioning or migration process, leaving stale replication metadata inside Active Directory.
         </p>
 
         <p>
@@ -387,7 +386,7 @@
         </p>
 
         <p>
-            Common errors found during this incident:
+            Common errors found in certain scenarios:
         </p>
 
         <ul>
@@ -1149,7 +1148,7 @@ Applications and Services Logs
     </h2>
 
     <p>
-        During a real customer incident, an additional issue was discovered after the DFSR repair.
+        In some environments, an additional issue may appear after DFSR recovery.
     </p>
 
     <p>
@@ -1169,7 +1168,7 @@ Applications and Services Logs
     </ul>
 
     <p>
-        Investigation revealed that the Domain Controller network adapter had switched to a Public network profile.
+        In some environments, the Domain Controller network profile may unexpectedly switch from Domain to Public after recovery operations.
     </p>
 
     <p>
@@ -1379,7 +1378,7 @@ Applications and Services Logs
         </h2>
 
         <p>
-            During the customer repair, the following warning was still present:
+            In some environments, the following warning was still present:
         </p>
 
         <div class="code-block">
@@ -1399,7 +1398,7 @@ Error:
 Missing glue A record
 
 Server:
-pc252.froidchapelle.local
+dc01.contoso.local
 </pre>
 
             </div>
@@ -1425,7 +1424,7 @@ pc252.froidchapelle.local
         </ul>
 
         <p>
-            The incident can still be considered resolved if all other tests are successful.
+            The environment can still be considered healthy if all other validation tests are successful.
         </p>
 
     </div>
@@ -1515,7 +1514,7 @@ Leap Indicator : No warning
 
             <div class="code-content">
 
-<pre><span class="ps-command">nltest</span> <span class="ps-operator">/sc_verify:FROIDCHAPELLE.LOCAL</span></pre>
+<pre><span class="ps-command">nltest</span> <span class="ps-operator">/sc_verify:CONTOSO.LOCAL</span></pre>
 
                 <button class="copy-btn" onclick="copyCode(this)">
                     Copy
@@ -1542,7 +1541,7 @@ Leap Indicator : No warning
             <div class="code-content">
 
 <pre>
-Trusted DC Name \\FC-VDC1.FROIDCHAPELLE.LOCAL
+Trusted DC Name \\DC01.CONTOSO.LOCAL
 
 Trusted DC Connection Status = 0x0
 
@@ -1697,13 +1696,13 @@ Applications and Services Logs
 
     </div>
 
-        <!-- POST RECOVERY CLIENT VALIDATION -->
+        <!-- POST RECOVERY VALIDATION -->
 
 <div class="section">
 
     <h2>
         <i class="fa-solid fa-laptop"></i>
-        Client Workstation Validation
+        Workstation Validation
     </h2>
 
     <p>
@@ -1761,7 +1760,7 @@ Applications and Services Logs
     </p>
 
 <pre>
-\\FC-VDC1
+\\DC01
 </pre>
 
     <h3>Step 2 - Verify Domain Controller Discovery</h3>
@@ -1776,7 +1775,7 @@ Applications and Services Logs
 
         <div class="code-content">
 
-<pre>nltest /dsgetdc:FROIDCHAPELLE.LOCAL</pre>
+<pre>nltest /dsgetdc:CONTOSO.LOCAL</pre>
 
             <button class="copy-btn" onclick="copyCode(this)">
                 Copy
@@ -1940,7 +1939,7 @@ ipconfig /renew
         </h2>
 
         <p>
-            The incident was caused by an incomplete Active Directory migration where an old Domain Controller had been removed without fully cleaning DFSR metadata.
+            A common cause of DFSR SYSVOL failures is an incomplete Active Directory migration or Domain Controller decommissioning process.
         </p>
 
         <p>
@@ -1952,11 +1951,11 @@ ipconfig /renew
         </p>
 
         <p>
-            Additional workstation issues were traced to IPv6 DNS configuration and were resolved by disabling IPv6 on affected laptops.
+            In some environments, workstation authentication issues may be related to DNS or IPv6 configuration and should be investigated as part of the post-recovery validation process.
         </p>
 
         <p>
-            During this incident, an additional issue was identified after the DFSR repair. The Domain Controller network adapter switched to a Public network profile, preventing some workstations from accessing network resources correctly. Restarting the network adapter restored normal operation.
+            In some environments, the Domain Controller network profile may switch from Domain to Public after recovery operations. If this occurs, restarting the network adapter may restore normal connectivity.
         </p>
 
         <p>

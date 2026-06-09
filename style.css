@@ -1,3 +1,5 @@
+
+
 /* ============================================================
    ✅ BASE LAYOUT (TON CODE D'ORIGINE – NON MODIFIÉ)
    ============================================================ */
@@ -884,27 +886,107 @@ input:checked + .chk {
 }
 
 /* ============================================================
-   ✅ DFSR
+   ✅ TUTORIEL SHAREPOINT
    ============================================================ */
 
-.audit-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+.tuto-image{
+    width:100%;
+    border-radius:8px;
+    border:1px solid #dcdcdc;
+    margin-top:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,.10);
 }
 
-.audit-table th {
-    background: #0f172a;
-    color: white;
-    padding: 12px;
-    text-align: left;
+.tuto-image:hover{
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
 }
 
-.audit-table td {
-    padding: 12px;
-    border: 1px solid #dcdcdc;
+.info-box{
+    background:#eef7ff;
+    border-left:5px solid #0078D4;
+    padding:15px;
+    border-radius:8px;
+    margin-top:15px;
 }
 
-.audit-table tr:nth-child(even) {
-    background: #f8fafc;
+.success-box{
+    background:#f0fff4;
+    border-left:5px solid #2e7d32;
+    padding:15px;
+    border-radius:8px;
+    margin-top:15px;
+}
+
+.warning-box{
+    background:#fff8e1;
+    border-left:5px solid #f9a825;
+    padding:15px;
+    border-radius:8px;
+    margin-top:15px;
+}
+
+.footer-logo{
+    max-height:70px;
+    margin-bottom:10px;
+}
+
+@media print{
+
+    .tuto-image{
+        box-shadow:none;
+    }
+
+}
+
+.footer-orbid{
+
+    display:flex;
+    justify-content:center;
+
+    padding:25px 0;
+
+    margin-top:40px;
+
+    border-top:1px solid #dcdcdc;
+}
+
+.footer-content{
+
+    display:flex;
+    align-items:center;
+
+    gap:25px;
+}
+
+.footer-logo{
+    max-height:80px;
+    width:auto;
+}
+
+.footer-right{
+
+    text-align:left;
+    line-height:1.8;
+}
+
+.footer-name{
+    font-size:1.05rem;
+    color:#0078D4;
+}
+
+.footer-copy{
+    color:#888;
+}
+
+@media(max-width:768px){
+
+    .footer-content{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .footer-right{
+        text-align:center;
+    }
+
 }
