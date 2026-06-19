@@ -81,7 +81,7 @@
         Verify the currently installed Veeam Backup & Replication build number.
     </p>
 
-    <img src="assets/veeam-current-version.png"
+    <img src="assets/veeam-current-version.webp"
          class="tutorial-image"
          alt="Current Veeam Version">
 
@@ -124,7 +124,7 @@
         <li>Verify the repository is accessible.</li>
     </ul>
 
-    <img src="assets/configuration-backup-settings.png"
+    <img src="assets/configuration-backup-settings.webp"
      class="tutorial-image"
      alt="Configuration Backup Settings">
 
@@ -132,7 +132,7 @@
             Browse the repository and confirm that .BCO files are present.
         </p>
 
-        <img src="assets/configuration-backup-bco-files.png"
+        <img src="assets/configuration-backup-bco-files.webp"
      class="tutorial-image"
      alt="Configuration Backup Files">
 
@@ -147,7 +147,7 @@
         <li>Verify the encryption password is currently in use.</li>
     </ul>
 
-    <img src="assets/encryption-passwords.png"
+    <img src="assets/encryption-passwords.webp"
      class="tutorial-image"
      alt="Encryption Passwords">
 
@@ -162,7 +162,7 @@
         <li>Verify no license warnings are present.</li>
     </ul>
 
-    <img src="assets/license-information.png"
+    <img src="assets/license-information.webp"
      class="tutorial-image"
      alt="License Information">
 
@@ -230,25 +230,46 @@
 
 </div>
 
+
 <div class="section">
     <h2>🚀 Start Upgrade</h2>
 
     <ol>
         <li>Mount the ISO.</li>
         <li>Run Setup.exe.</li>
-        <li>Select Upgrade Veeam Backup & Replication.</li>
-        <li>Keep the existing license.</li>
-        <li>Continue through the wizard.</li>
     </ol>
 
-</div>
+    <img src="assets/veeam-upgrade-launcher.webp"
+         class="tutorial-image"
+         alt="Veeam Setup Launcher">
 
-<div class="section">
-    <h2>📦 Install Prerequisites</h2>
+    <ol start="3">
+        <li>Select <strong>Upgrade Veeam Backup & Replication</strong>.</li>
+    </ol>
 
-    <p>
-        Accept installation of all required prerequisites if prompted.
-    </p>
+    <img src="assets/veeam-upgrade-selection.webp"
+         class="tutorial-image"
+         alt="Upgrade Veeam Backup and Replication">
+
+    <ol start="4">
+        <li>Accept the License Agreement.</li>
+    </ol>
+
+    <img src="assets/veeam-license-agreement.webp"
+         class="tutorial-image"
+         alt="Veeam License Agreement">
+
+    <ol start="5">
+        <li>Verify that the existing license is detected correctly.</li>
+    </ol>
+
+    <img src="assets/veeam-license-validation.webp"
+         class="tutorial-image"
+         alt="Veeam License Validation">
+
+    <ol start="6">
+        <li>Continue through the wizard.</li>
+    </ol>
 
 </div>
 
@@ -256,24 +277,40 @@
     <h2>🔄 Reboot Server</h2>
 
     <p>
-        Reboot the server if requested by the installer.
+        During prerequisite installation, Veeam may require a server reboot before the upgrade can continue.
     </p>
 
-    <p>
-        Re-launch Setup.exe after reboot and resume the upgrade.
-    </p>
+    <img src="assets/prerequisites-reboot-required.webp"
+         class="tutorial-image"
+         alt="Veeam Prerequisites Reboot Required">
+
+    <ol>
+        <li>Click <strong>Reboot</strong>.</li>
+        <li>Wait for the server to restart completely.</li>
+        <li>Reconnect to the server.</li>
+        <li>Mount the Veeam installation ISO again if required.</li>
+        <li>Open the mounted ISO.</li>
+        <li>Run <strong>Setup.exe</strong>.</li>
+        <li>Click <strong>Upgrade Veeam Backup & Replication</strong>.</li>
+        <li>Go through the upgrade wizard again.</li>
+        <li>Continue the installation until completion.</li>
+    </ol>
 
 </div>
 
 <div class="section">
     <h2>⚙️ Upgrade Components</h2>
 
-    <ul>
-        <li>Enable Update remote components automatically.</li>
-    </ul>
+    <p>
+        Review the detected Veeam components that will be upgraded.
+    </p>
+
+    <img src="assets/veeam-upgrade-components-list.webp"
+         class="tutorial-image"
+         alt="Veeam Upgrade Components List">
 
     <p>
-        This updates backup infrastructure components automatically.
+        Verify all required components are selected and continue.
     </p>
 
 </div>
@@ -285,6 +322,14 @@
         Click Upgrade and wait for the installation to complete.
     </p>
 
+    <img src="assets/veeam-upgrade-progress.webp"
+         class="tutorial-image"
+         alt="Veeam Upgrade Progress">
+
+    <p>
+        The upgrade process may take several minutes depending on the environment.
+    </p>
+
     <p>
         Verify the installer reports a successful upgrade.
     </p>
@@ -293,6 +338,14 @@
 
 <div class="section">
     <h2>🔄 Final Reboot</h2>
+
+    <img src="assets/veeam-upgrade-success.webp"
+         class="tutorial-image"
+         alt="Veeam Upgrade Successful">
+
+    <p>
+        Verify that the upgrade completed successfully.
+    </p>
 
     <p>
         Reboot the server if requested.
@@ -309,11 +362,63 @@
         <li>Complete MFA authentication if required.</li>
     </ul>
 
-    <img src="assets/veeam-console-login.png"
+    <img src="assets/veeam-console-login.webp"
      class="tutorial-image"
      alt="Veeam Console Login">
 
 </div>
+
+<section id="entra-id-notification">
+
+    <h2>Microsoft Entra ID Notification</h2>
+
+    <p>
+        After the first launch of Veeam Backup & Replication 12.3, an informational message about Microsoft Entra ID backup support may appear.
+    </p>
+
+    <p>
+        This is expected behavior and does not require any action.
+    </p>
+
+    <img src="assets/veeam-entra-id-notification.webp"
+         alt="Microsoft Entra ID Notification"
+         class="tutorial-image">
+
+    <p>
+        Click <strong>OK</strong> to continue.
+    </p>
+
+</section>
+
+<section id="update-local-components">
+
+    <h2>Update Local Components</h2>
+
+    <p>
+        After the Veeam Backup & Replication server upgrade is completed and the console opens successfully, Veeam may detect local components that still require an update.
+    </p>
+
+    <p>
+        Select the server and click <strong>Apply</strong>.
+    </p>
+
+    <img src="assets/veeam-components-update-selection.webp"
+         alt="Veeam Components Update Selection"
+         class="tutorial-image">
+
+    <p>
+        Wait for the update process to complete.
+    </p>
+
+    <img src="assets/veeam-components-update-success.webp"
+         alt="Veeam Components Update Success"
+         class="tutorial-image">
+
+    <p>
+        Verify that all components have been upgraded successfully and click <strong>Finish</strong>.
+    </p>
+
+</section>
 
 <div class="section">
     <h2>🔍 Post-Upgrade Validation</h2>
@@ -448,13 +553,97 @@
 
 </div>
 
+<div class="faq-item">
+    <button class="faq-question">
+        Upgrade failed – PostgreSQL SSPI authentication failed for user "postgres"
+    </button>
+
+    <div class="faq-answer">
+
+        <h4>Erreur observée</h4>
+
+        <pre>
+FATAL: authentification SSPI échouée pour l'utilisateur "postgres"
+
+ou
+
+authentication SSPI failed for user "postgres"
+        </pre>
+
+        <h4>Cause</h4>
+
+        <p>
+            Le compte Windows utilisé pour lancer l'upgrade n'est pas autorisé dans PostgreSQL à se connecter avec le compte PostgreSQL <strong>postgres</strong>.
+        </p>
+
+        <h4>Vérification</h4>
+
+        <p>Ouvrir le fichier :</p>
+
+        <pre>
+notepad "C:\Program Files\PostgreSQL\15\data\pg_ident.conf"
+        </pre>
+
+        <p>
+            Vérifier qu'une ligne existe pour le compte utilisé pendant l'upgrade.
+        </p>
+
+        <img src="assets/pg-ident-conf-veeam-upgrade.webp"
+             alt="Configuration pg_ident.conf PostgreSQL"
+             class="tutorial-image">
+
+        <p>Exemple de configuration valide :</p>
+
+        <pre>
+# MAPNAME    SYSTEM-USERNAME         PG-USERNAME
+
+veeam  Administrator@TEN-VBU01       postgres
+veeam  "SYSTEM@NT AUTHORITY"         postgres
+veeam  vbr.admin@TEN-VBU01           postgres
+        </pre>
+
+        <h4>Résolution</h4>
+
+        <p>
+            Ajouter le compte Windows utilisé pour exécuter l'upgrade :
+        </p>
+
+        <pre>
+veeam  NOM_UTILISATEUR@SERVEUR  postgres
+        </pre>
+
+        <p>
+            Redémarrer ensuite le service PostgreSQL :
+        </p>
+
+        <pre>
+Restart-Service postgresql-x64-15
+        </pre>
+
+        <p>
+            Une fois le service redémarré, relancer l'upgrade Veeam.
+        </p>
+
+        <h4>Quand appliquer cette correction ?</h4>
+
+        <p>
+            Uniquement si l'upgrade échoue avec une erreur contenant :
+        </p>
+
+        <pre>
+authentication SSPI failed for user "postgres"
+        </pre>
+
+    </div>
+</div>
+
 </div>
 
 <footer class="footer-orbid">
 
 <div class="footer-content">
 
-    <img src="../dariuslabs.png"
+    <img src="../dariuslabs.webp"
          class="footer-logo"
          alt="ORBID">
 
