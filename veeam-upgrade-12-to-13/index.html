@@ -167,7 +167,7 @@
     <h2>🖥️ Verify Platform Compatibility</h2>
 
     <p>
-        Verify the virtualization platform and protected operating systems are supported by Veeam Backup & Replication 13.
+        Verify that the virtualization platform and protected operating systems are supported by the target Veeam Backup & Replication version before starting the upgrade.
     </p>
 
     <p>
@@ -175,15 +175,26 @@
     </p>
 
     <ul>
-        <li>VMware ESXi version is supported.</li>
-        <li>vCenter Server version is supported.</li>
-        <li>Protected Windows Server versions are supported.</li>
-        <li>Protected Linux distributions are supported.</li>
-        <li>No legacy or end-of-life operating systems are protected.</li>
+        <li>VMware ESXi version.</li>
+        <li>VMware vCenter Server version if applicable.</li>
+        <li>Microsoft Hyper-V version if applicable.</li>
+        <li>Protected Windows operating systems.</li>
+        <li>Protected Linux distributions.</li>
+        <li>No end-of-life or unsupported operating systems are currently protected by Veeam.</li>
     </ul>
 
     <p>
-        Review the official Veeam System Requirements documentation if necessary.
+        Typical legacy operating systems requiring additional validation include:
+    </p>
+
+    <ul>
+        <li>Windows Server 2008 / 2008 R2.</li>
+        <li>Windows Server 2012 / 2012 R2.</li>
+        <li>Unsupported or end-of-life Linux distributions.</li>
+    </ul>
+
+    <p>
+        Compare all detected versions against the official Veeam Backup & Replication System Requirements and User Guide documentation for the target release before proceeding with the upgrade.
     </p>
 
 </div>
