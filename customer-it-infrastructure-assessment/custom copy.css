@@ -1,11 +1,79 @@
 /* ============================================================
-   ✅ BASE LAYOUT
+   ✅ BASE LAYOUT (TON CODE D'ORIGINE – NON MODIFIÉ)
    ============================================================ */
+
+body {
+    margin: 0;
+    background: #f3f3f3;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    color: #2a2a2a;
+}
+
+header {
+    background: #0078D4;
+    padding: 30px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.section {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    border-left: 6px solid #0078D4;
+}
+
+.section h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    color: #0078D4;
+    display: flex;
+    align-items: center;
+}
+
+.section h2 i {
+    margin-right: 10px;
+}
 
 .action-bar {
     display: flex;
     gap: 15px;
     margin-bottom: 25px;
+}
+
+.btn {
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn.primary {
+    background: #0078D4;
+    color: white;
+}
+
+.btn.secondary {
+    background: #ddd;
+    color: #333;
 }
 
 #clientNameError {
@@ -32,6 +100,20 @@
     border: 1px solid #aaa;
     box-sizing: border-box;
 }
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    font-size: .9rem;
+}
+
+.section label {
+    display: block;
+    margin-top: 15px;
+}
+
 
 /* ============================================================
    ✅ TITRES DES COLONNES – OK / WARNING / NOK
@@ -365,6 +447,60 @@ input:checked + .chk {
 }
 
 /* ============================================================
+   ✅ BUTTON HOVER – MICROSOFT FLUENT STYLE (2026)
+   ============================================================ */
+
+.btn {
+    transition:
+        background-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.15s ease,
+        filter 0.15s ease;
+}
+
+/* ===== PRIMARY BUTTON ===== */
+.btn.primary:hover {
+    background: #1084e8; /* bleu Microsoft plus clair */
+    box-shadow: 0 6px 16px rgba(0, 120, 212, 0.35);
+    transform: translateY(-1px);
+}
+
+.btn.primary:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(0, 120, 212, 0.3);
+    filter: brightness(0.95);
+}
+
+/* ===== SECONDARY BUTTONS ===== */
+.btn.secondary:hover {
+    background: #e6e6e6;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: translateY(-1px);
+}
+
+.btn.secondary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    filter: brightness(0.97);
+}
+
+/* ===== ICON SMOOTH MOVE ===== */
+.btn i {
+    transition: transform 0.2s ease;
+}
+
+.btn:hover i {
+    transform: translateY(-1px);
+    backdrop-filter: blur(2px);
+}
+
+/* ===== ACCESSIBILITY / KEYBOARD ===== */
+.btn:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0,120,212,0.35);
+}
+
+/* ============================================================
    ✅ ENGINEER COMMENTS – TEXTAREA PROPRE & RÉACTIVE
    ============================================================ */
 
@@ -504,6 +640,219 @@ input:checked + .chk {
 
 .vm-template {
     display: none !important;
+}
+
+/* ============================================================
+   ✅ COMMAND BLOCKS (CMD / POWERSHELL / BASH)
+   ============================================================ */
+
+.code-block{
+    display:inline-flex;
+    align-items:center;
+
+    margin-top:15px;
+    margin-bottom:20px;
+
+    border-radius:10px;
+    overflow:hidden;
+
+    border:1px solid #0f1720;
+    background:#0c0f14;
+
+    max-width:100%;
+
+    box-shadow:
+        0 4px 14px rgba(0,0,0,0.28),
+        inset 0 1px 0 rgba(255,255,255,0.02);
+}
+
+/* ===== LEFT LABEL ===== */
+
+.code-header{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    padding:10px 14px;
+
+    background:#111827;
+    border-right:1px solid #1f2937;
+
+    flex-shrink:0;
+}
+
+/* ===== CMD ===== */
+
+.code-language{
+    color:#79c0ff;
+    font-size:13px;
+    font-weight:700;
+
+    text-transform:uppercase;
+    letter-spacing:0.6px;
+}
+
+/* ===== COMMAND CONTENT ===== */
+
+.code-content{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:8px 12px;
+
+    background:#0c0f14;
+}
+
+.code-content pre{
+    margin:0;
+
+    color:#e6edf3;
+    font-size:14px;
+    line-height:1.5;
+    font-family:Consolas, "Cascadia Code", monospace;
+
+    white-space:pre-wrap;
+    word-break:break-word;
+}
+
+/* ===== COPY BUTTON ===== */
+
+.copy-btn{
+    background:#1f6feb;
+    color:white;
+
+    border:none;
+    border-radius:6px;
+
+    padding:6px 12px;
+
+    cursor:pointer;
+
+    font-size:13px;
+    font-weight:600;
+
+    transition:
+        background 0.15s ease,
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+
+    box-shadow:0 2px 6px rgba(0,0,0,0.25);
+}
+
+.copy-btn:hover{
+    background:#388bfd;
+    transform:translateY(-1px);
+}
+
+.copy-btn:active{
+    transform:translateY(0);
+}
+
+/* ============================================================
+   ✅ POWERSHELL COLORS
+   ============================================================ */
+
+/* Commandlets / executable */
+.ps-command{
+    color:#4fc1ff;
+}
+
+/* Variables */
+.ps-variable{
+    color:#ffb86b;
+}
+
+/* Properties / parameters */
+.ps-property{
+    color:#c792ea;
+}
+
+/* Numbers / IP / ports */
+.ps-number{
+    color:#79c0ff;
+}
+
+/* Strings */
+.ps-string{
+    color:#98ec65;
+}
+
+/* Operators / symbols */
+.ps-operator{
+    color:#e6edf3;
+}
+
+/* Comments */
+.ps-comment{
+    color:#6a9955;
+    font-style:italic;
+}
+
+/* ============================================================
+   ✅ INLINE SMALL BLOCKS
+   ============================================================ */
+
+.code-inline{
+    display:inline-flex;
+    align-items:center;
+}
+
+/* ============================================================
+   ✅ LINK BLOCK
+   ============================================================ */
+
+.link-block{
+    display:inline-flex;
+    align-items:center;
+
+    margin-top:15px;
+
+    border-radius:10px;
+    overflow:hidden;
+
+    border:1px solid #0f1720;
+    background:#0c0f14;
+
+    max-width:100%;
+}
+
+.link-label{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    padding:10px 14px;
+
+    background:#111827;
+    border-right:1px solid #1f2937;
+
+    color:#79c0ff;
+    font-size:13px;
+    font-weight:700;
+
+    text-transform:uppercase;
+    letter-spacing:0.6px;
+}
+
+.link-content{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:8px 12px;
+}
+
+.link-content pre{
+    margin:0;
+
+    color:#e6edf3;
+    font-size:14px;
+    line-height:1.5;
+    font-family:Consolas, "Cascadia Code", monospace;
+
+    white-space:pre-wrap;
+    word-break:break-word;
 }
 
 /* ============================================================

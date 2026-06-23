@@ -1,0 +1,209 @@
+/* ============================================================
+   LAYOUT GLOBAL
+   ============================================================ */
+
+.layout{
+    display:flex;
+    min-height:100vh;
+}
+
+.content{
+    flex:1;
+    overflow-x:hidden;
+}
+
+#sidebar-container{
+    display:flex;
+}
+
+/* ============================================================
+   SIDEBAR
+   ============================================================ */
+
+.sidebar{
+    width:280px;
+    height:100vh;
+
+    position:sticky;
+    top:0;
+
+    background:var(--surface);
+    border-right:1px solid var(--border);
+
+    padding:25px;
+    box-sizing:border-box;
+
+    overflow-y:auto;
+}
+
+/* ============================================================
+   SIDEBAR LOGO
+   ============================================================ */
+
+.sidebar-logo{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.sidebar-brand-logo{
+    width:90px;
+    height:auto;
+    margin-bottom:12px;
+}
+
+.sidebar-logo h2{
+    margin:0;
+    color:var(--accent);
+    font-size:1.5rem;
+}
+
+.sidebar-logo p{
+    margin-top:8px;
+    font-size:.85rem;
+    color:var(--text-secondary);
+    line-height:1.5;
+}
+
+/* ============================================================
+   MENU
+   ============================================================ */
+
+.menu-section{
+    margin-bottom:30px;
+}
+
+.menu-section h3{
+    color:var(--accent);
+    margin-bottom:15px;
+    font-size:1rem;
+}
+
+.menu-section a{
+    display:block;
+
+    padding:10px 12px;
+    margin-bottom:8px;
+
+    text-decoration:none;
+    color:var(--text);
+
+    border-radius:8px;
+
+    transition:.2s;
+}
+
+.menu-section a:hover{
+    background:var(--surface-hover);
+    transform:translateX(5px);
+}
+
+/* ============================================================
+   HEADER / HERO
+   ============================================================ */
+
+.hero{
+    margin:0;
+}
+
+.hero header{
+    margin:0;
+    border-radius:0;
+}
+
+.content header{
+    margin:0;
+    border-radius:0;
+}
+
+/* ============================================================
+   PAGE CONTAINER
+   ============================================================ */
+
+.content .container{
+    width:auto;
+    max-width:none;
+    margin:30px;
+}
+
+/* ============================================================
+   CARDS GRID
+   ============================================================ */
+
+.card-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(320px, 500px));
+
+    gap:25px;
+
+    padding:40px;
+
+    justify-content:center;
+}
+
+/* ============================================================
+   PORTAL CARDS
+   ============================================================ */
+
+.portal-card{
+    background:var(--surface);
+
+    border:1px solid var(--border);
+    border-radius:12px;
+
+    padding:25px;
+
+    transition:.25s;
+}
+
+.portal-card:hover{
+    transform:translateY(-5px);
+
+    box-shadow:0 12px 24px rgba(0,0,0,.12);
+}
+
+.portal-card h2{
+    margin-top:0;
+    color:var(--accent);
+}
+
+.portal-card ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.portal-card li{
+    margin-bottom:12px;
+}
+
+.portal-card a{
+    text-decoration:none;
+    color:var(--text);
+}
+
+.portal-card a:hover{
+    color:var(--accent);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media(max-width:900px){
+
+    .layout{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+        height:auto;
+
+        position:relative;
+
+        border-right:none;
+        border-bottom:1px solid var(--border);
+    }
+}

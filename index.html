@@ -7,7 +7,8 @@
 <title>DariusLabs Internal</title>
 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./home.css">
 
 <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -15,7 +16,48 @@
 </head>
 <body>
 
-<header>
+<div class="layout">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <h2>DariusLabs Team</h2>
+            <p>Knowledge Base & IT Procedures</p>
+        </div>
+
+        <div class="menu-section">
+
+            <h3>📚 Tutorials</h3>
+
+            <a href="./dfsr-sysvol-recovery/">
+                DFSR SYSVOL Recovery
+            </a>
+
+            <a href="./veeam-upgrade-12-to-13/">
+                Veeam Upgrade v12.3.x to v13
+            </a>
+
+            <a href="./veeam-upgrade-to-latest-v12/">
+                Veeam Upgrade to latest v12
+            </a>
+
+        </div>
+
+        <div class="menu-section">
+
+            <h3>🛠 Tools</h3>
+
+            <a href="./customer-it-infrastructure-assessment/">
+                Customer IT Infrastructure Assessment
+            </a>
+
+        </div>
+
+    </aside>
+
+    <main class="content">
+
+        <header>
 
     <h1>
         <i class="fa-solid fa-book"></i>
@@ -28,98 +70,66 @@
 
 </header>
 
-<div class="container">
+        <div class="card-grid">
 
-    <div class="grid-2">
+            <div class="portal-card">
 
-        <!-- Tutorials -->
+                <h2>
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    Tutorials
+                </h2>
 
-        <div class="section">
+                <ul>
 
-            <h2>
-                <i class="fa-solid fa-graduation-cap"></i>
-                Tutorials
-            </h2>
+                    <li>
+                        <a href="./dfsr-sysvol-recovery/">
+                            DFSR SYSVOL Recovery
+                        </a>
+                    </li>
 
-            <ul class="checklist">
+                    <li>
+                        <a href="./veeam-upgrade-12-to-13/">
+                            Veeam Upgrade v12.3.x to v13
+                        </a>
+                    </li>
 
-                <li class="item-row">
-                    <a class="item-tuto"
-                       href="./dfsr-sysvol-recovery/">
-                        DFSR SYSVOL Recovery
-                    </a>
-                </li>
+                    <li>
+                        <a href="./veeam-upgrade-to-latest-v12/">
+                            Veeam Upgrade to latest v12
+                        </a>
+                    </li>
 
-                <li class="item-row">
-                    <a class="item-tuto"
-                       href="./veeam-upgrade-12-to-13/">
-                        Veeam Upgrade v12.3.x to v13
-                    </a>
-                </li>
+                </ul>
 
-                <li class="item-row">
-                    <a class="item-tuto"
-                       href="./veeam-upgrade-to-latest-v12/">
-                        Veeam Upgrade to latest v12
-                    </a>
-                </li>
+            </div>
 
-                <!-- Ajouter les futurs tutoriels ici -->
+            <div class="portal-card">
 
-            </ul>
+                <h2>
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    Tools
+                </h2>
 
-        </div>
+                <ul>
 
-        <!-- Tools -->
+                    <li>
+                        <a href="./customer-it-infrastructure-assessment/">
+                            Customer IT Infrastructure Assessment
+                        </a>
+                    </li>
 
-        <div class="section">
+                </ul>
 
-            <h2>
-                <i class="fa-solid fa-screwdriver-wrench"></i>
-                Tools
-            </h2>
-
-            <ul class="checklist">
-
-                <li class="item-row">
-                    <a class="item-tuto" href="./customer-it-infrastructure-assessment/">
-                        Customer IT infrastructure assessment
-                    </a>
-                </li>
-
-                <!-- Ajouter les futurs outils ici -->
-
-            </ul>
+            </div>
 
         </div>
 
-    </div>
+    </main>
 
 </div>
 
-<footer class="footer-dariuslabs">
-
-    <div class="footer-content">
-
-        <img src="dariuslabs.webp"
-             class="footer-logo"
-             alt="DariusLabs">
-
-        <div class="footer-right">
-
-            <div class="footer-name">
-                <strong>ESLAHI OMANDANI Jasha</strong>
-            </div>
-
-            <div>IT System Engineer</div>
-
-        </div>
-
-    </div>
-
-</footer>
-
-<script src="theme.js"></script>
+<script src="./theme.js"></script>
+<script src="./sidebar.js"></script>
 
 </body>
 </html>
