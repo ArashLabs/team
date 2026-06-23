@@ -1122,3 +1122,19 @@ input:checked + .chk {
 .faq-answer p{
     line-height:1.7;
 }
+
+/* ============================================================
+   Tableau
+   ============================================================ */
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+@media (max-width: 900px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
