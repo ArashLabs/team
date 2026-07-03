@@ -1029,43 +1029,20 @@ clone.querySelectorAll(".vm-row").forEach(row => {
            ✅ SAVE FILE
            ===================================================== */
 
-        if ("showSaveFilePicker" in window) {
-
-            const handle =
-                await window.showSaveFilePicker({
-
-                    suggestedName: fileName,
-
-                    types: [{
-                        description: "PDF File",
-                        accept: {
-                            "application/pdf": [".pdf"]
-                        }
-                    }]
-                });
-
-            const writable =
-                await handle.createWritable();
-
-            const pdfBlob = pdf.output("blob");
-
-            await writable.write(pdfBlob);
-
-            await writable.close();
-
-        } else {
-
-            pdf.save(fileName);
-        }
+        pdf.save(fileName);
 
         alert("✅ PDF exported successfully!");
 
     } catch (err) {
 
-        console.error(err);
+    console.error(err);
 
-        alert("❌ PDF export failed.");
-    }
+    alert(
+        "Erreur : " +
+        err.message +
+        "\n\nRegarde la console (F12) pour plus de détails."
+    );
+}
 }
 
 
